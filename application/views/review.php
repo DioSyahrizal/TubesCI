@@ -38,7 +38,7 @@ $this->load->view('header');
         <!-- Blog Comments -->
 
         <!-- Comments Form -->
-        <div class="well">
+        <!-- <div class="well">
             <h4>Leave a Comment:</h4>
             <form role="form">
                 <div class="form-group">
@@ -91,10 +91,10 @@ $this->load->view('header');
             </div>
         </div>
 
-    </div>
+    </div> -->
 
     <!-- Blog Sidebar Widgets Column -->
-    <div class="col-md-4">
+    <!-- <div class="col-md-4"> -->
 
         <!--
         <div class="well">
