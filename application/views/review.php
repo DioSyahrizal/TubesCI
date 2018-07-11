@@ -48,12 +48,12 @@ $this->load->view('header');
             </form>
         </div>
 
-        <hr>
+        <hr> -->
 
         <!-- Posted Comments -->
 
         <!-- Comment -->
-        <div class="media">
+        <!-- <div class="media">
             <a class="pull-left" href="#">
                 <img class="media-object" src="http://placehold.it/64x64" alt="">
             </a>
@@ -63,10 +63,10 @@ $this->load->view('header');
                 </h4>
                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
             </div>
-        </div>
+        </div> -->
 
         <!-- Comment -->
-        <div class="media">
+        <!-- <div class="media">
             <a class="pull-left" href="#">
                 <img class="media-object" src="http://placehold.it/64x64" alt="">
             </a>
@@ -75,7 +75,7 @@ $this->load->view('header');
                     <small>August 25, 2014 at 9:30 PM</small>
                 </h4>
                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                <!-- Nested Comment -->
+                
                 <div class="media">
                     <a class="pull-left" href="#">
                         <img class="media-object" src="http://placehold.it/64x64" alt="">
@@ -87,14 +87,14 @@ $this->load->view('header');
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
                     </div>
                 </div>
-                <!-- End Nested Comment -->
+                
             </div>
-        </div>
+        </div> -->
 
-    </div> -->
+    </div>
 
     <!-- Blog Sidebar Widgets Column -->
-    <!-- <div class="col-md-4"> -->
+    <div class="col-md-4">
 
         <!--
         <div class="well">
