@@ -1,7 +1,16 @@
 <?php
 $this->load->view('header');
 ?>
-
+<style>
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h2{
+        text-align: center;
+    }
+</style>
     <div class="container">
 
 <div class="row">
@@ -95,7 +104,9 @@ $this->load->view('header');
 
     <!-- Blog Sidebar Widgets Column -->
     <div class="col-md-4">
-
+        
+        <a href="<?php echo site_url('post/cetak/'.$isi[0]->id)?>"><button type="button" class="btn btn-large btn-block btn-danger">Print</button></a>
+        
         <!--
         <div class="well">
             <h4>Blog Search</h4>

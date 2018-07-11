@@ -154,6 +154,36 @@ class Post extends CI_Controller {
 			echo $this->datatables->generate();
     }
 
+    public function cetak($no){
+        $this->load->library('dompdf_gen');
+        $this->load->helper('file');
+        if ($this->session->userdata('logged in')) {
+            $session_data = $this->session->userdata('logged in');
+            $data['username'] = $session_data['username'];
+            $id=$session_data['id'];
+                $this->load->model('user');
+                $tampil['list_user']=$this->user->getUser($id);
+                $this->load->model('post_model');
+                $tampil['isi']=$this->post_model->getReview($no);
+                $tampil['review']=$this->post_model->getReviewQueryObject();
+                $this->load->view('print',$tampil);
+                $paper_size='A4';
+                $orientation='landscape';
+                $html=$this->output->get_output();
+
+                $dompdf= new DOMPDF();
+                $this->dompdf->load_html($html);
+                $this->dompdf->render();
+                $this->dompdf->stream("Download.pdf");
+                unset($html);
+                unset($dompdf);
+            }else{
+                redirect('login','refresh');
+            }
+    }
+
+    
+
 }
 
 /* End of file Controllername.php */
