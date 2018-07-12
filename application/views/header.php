@@ -31,7 +31,7 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             </button>
-            <a target="" href="<?=site_url()?>/post" class="navbar-brand">Tesseract</a>
+            <a target="" href="<?=site_url()?>post" class="navbar-brand">Tesseract</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">

@@ -27,7 +27,7 @@
 	<div class="container">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<?php echo form_open('login/cekLogin'); ?>
-		
+					<?php echo validation_errors(); ?>
 						<h2>Login</h2>
 					</span>
 

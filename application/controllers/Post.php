@@ -47,7 +47,7 @@ class Post extends CI_Controller {
                 $tampil['list_user']=$this->user->getUser($id);
                 $this->load->model('post_model');
                 $tampil['isi']=$this->post_model->getReview($no);
-                $tampil['review']=$this->post_model->getReviewQueryObject();
+                $tampil['review']=$this->post_model->getReviewRandom();
                 $this->load->view('review',$tampil);
             }else{
                 redirect('login','refresh');
@@ -92,7 +92,9 @@ class Post extends CI_Controller {
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules('judul','Judul','trim|required');
-	
+        $this->form_validation->set_rules('foto', 'Foto', 'trim|required');
+        
+
         $this->load->model('post_model');
         if($this->form_validation->run() == FALSE) {
 			$this->load->view('user/tambahreview');
@@ -123,7 +125,7 @@ class Post extends CI_Controller {
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules('judul','Judul','trim|required');
-	
+        
         $this->load->model('post_model');
         $isi['review']=$this->post_model->getReview($id);
         

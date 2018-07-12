@@ -44,6 +44,11 @@ class Post_model extends CI_Model {
 		return $query->result();
     }
 
+    public function getReviewRandom(){
+        $this->db->order_by('judul', 'random');
+		return $this->db->get('review', 3)->result();
+    }
+
     public function pencarian($judul){
         $this->db->like('judul',$judul);
         return $this->db->get('review')->result();
