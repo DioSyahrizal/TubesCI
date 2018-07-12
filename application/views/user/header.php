@@ -82,9 +82,6 @@
                             <li>
                             <a href="<?php echo site_url()?>post/tabel"><i class="fa fa-fw fa-table"></i> Review</a>
                             </li>
-                            <li>
-                                <a href="<?php echo site_url()?>post/tabelKatalog">Katalog</a>
-                            </li>
                         </ul>
                     </li>
                     <li>
@@ -92,9 +89,6 @@
                         <ul id="tabel" class="collapse">
                             <li>
                                 <a href="<?php echo site_url()?>post/tambahreview">Review</a>
-                            </li>
-                            <li>
-                                <a href="<?php echo site_url()?>post/tambahkatalog">Katalog</a>
                             </li>
                         </ul>
                     </li>

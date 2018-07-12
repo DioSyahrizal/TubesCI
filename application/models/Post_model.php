@@ -31,7 +31,7 @@ class Post_model extends CI_Model {
 	{
 		$this->db->where('id',$id);
 		$this->db->delete('review');
-	}
+    }
     
     public function getReview($id){
         $this->db->where('id',$id);
@@ -44,6 +44,10 @@ class Post_model extends CI_Model {
 		return $query->result();
     }
 
+    public function pencarian($judul){
+        $this->db->like('judul',$judul);
+        return $this->db->get('review')->result();
+    }
    
 
 }

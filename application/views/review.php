@@ -10,6 +10,12 @@ $this->load->view('header');
     h2{
         text-align: center;
     }
+    hr{
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
 </style>
     <div class="container">
 
@@ -105,8 +111,16 @@ $this->load->view('header');
     <!-- Blog Sidebar Widgets Column -->
     <div class="col-md-4">
         
-        <a href="<?php echo site_url('post/cetak/'.$isi[0]->id)?>"><button type="button" class="btn btn-large btn-block btn-danger">Print</button></a>
         
+        
+        <div class="well">
+            <div class="row">
+                <div class="col-lg-12">
+                <a href="<?php echo site_url('post/cetak/'.$isi[0]->id)?>"><button type="button" class="btn btn-large btn-block btn-success">Print</button></a>
+                </div>               
+            </div>
+            <!-- /.row -->
+        </div>
         <!--
         <div class="well">
             <h4>Blog Search</h4>

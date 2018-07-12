@@ -7,10 +7,30 @@ $this->load->view('header');
 
 		padding: 100px 25px;
 		font-family: Montserrat, sans-serif;
-	},
+	}
 
+	.kanan{
+		float: right !important;
+		padding-right: 40px;
+		padding-bottom: 20px;
+	}
 
 </style>
+
+<?=form_open('post/hasilcari');?>
+	<div class="row">
+		<div class="kanan col-xs-6 col-md-4">
+			<div class="input-group">
+				<input type="text" class="form-control" name="judul" placeholder="Search" id="txtSearch" />
+				<div class="input-group-btn">
+					<button class="btn btn-primary" type="submit">
+						<span class="glyphicon glyphicon-search"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
 <div class="jumbotron text-center" style="background-image: url(<?=base_url()?>assets/image/deadspace.jpg);">
 	<h1>Tesseract</h1>
 	<p>Review dan Katalog</p>
@@ -21,23 +41,23 @@ $this->load->view('header');
 		<div class="well-sm">
 			<h2>Review</h2>
 		</div>
-		
+
 		<div class="row">
 			<?php foreach ($review as $key) { ?>
-            <div class="col-sm-3">
-               <img class="img-responsive img-center" src=<?=base_url("assets/image/review")."/".$key->foto?> height="300px" width="300px">
-			   <a href="<?php echo site_url('post/review/'. $key->id)?>"><h3><?php echo $key->judul?></h3></a>
-                <?php //echo word_limiter($key->post, 10);?>
-            </div>
+			<div class="col-sm-3">
+				<img class="img-responsive img-center" src=<?=base_url( "assets/image/review"). "/".$key->foto?> height="300px" width="300px">
+				<a href="<?php echo site_url('post/review/'. $key->id)?>">
+					<h3>
+						<?php echo $key->judul?>
+					</h3>
+				</a>
+				<?php //echo word_limiter($key->post, 10);?>
+			</div>
 			<?php } ?>
-        </div>
-		
+		</div>
 
-	</div>
-	<div class="container" align="right"><a href="<?=site_url()?>/review/review">See detail</a></div>
-</div>
 
-<!-- <div id="katalog">
+		<!-- <div id="katalog">
 	<div class="container">
 		<div class="well-sm">
 			<h2>Katalog</h2>
@@ -75,8 +95,8 @@ $this->load->view('header');
 	<div class="container" align="right">See detail</div>
 </div> -->
 
-<!-- Container (About Section) -->
-<!-- <div id="about" class="container-fluid">
+		<!-- Container (About Section) -->
+		<!-- <div id="about" class="container-fluid">
 	<div class="row">
 		<div class="col-sm-8">
 			<h2>About Company Page</h2>
@@ -100,51 +120,51 @@ $this->load->view('header');
 
 
 
-<footer class="container-fluid text-center">
-	<a href="#myPage" title="To Top">
-		<span class="glyphicon glyphicon-chevron-up"></span>
-	</a>
+		<footer class="container-fluid text-center">
+			<a href="#myPage" title="To Top">
+				<span class="glyphicon glyphicon-chevron-up"></span>
+			</a>
 
-</footer>
+		</footer>
 
-<script>
-	$(document).ready(function () {
-		// Add smooth scrolling to all links in navbar + footer link
-		$(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-			// Make sure this.hash has a value before overriding default behavior
-			if (this.hash !== "") {
-				// Prevent default anchor click behavior
-				event.preventDefault();
+		<script>
+			$(document).ready(function () {
+				// Add smooth scrolling to all links in navbar + footer link
+				$(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+					// Make sure this.hash has a value before overriding default behavior
+					if (this.hash !== "") {
+						// Prevent default anchor click behavior
+						event.preventDefault();
 
-				// Store hash
-				var hash = this.hash;
+						// Store hash
+						var hash = this.hash;
 
-				// Using jQuery's animate() method to add smooth page scroll
-				// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-				$('html, body').animate({
-					scrollTop: $(hash).offset().top
-				}, 900, function () {
+						// Using jQuery's animate() method to add smooth page scroll
+						// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+						}, 900, function () {
 
-					// Add hash (#) to URL when done scrolling (default click behavior)
-					window.location.hash = hash;
+							// Add hash (#) to URL when done scrolling (default click behavior)
+							window.location.hash = hash;
+						});
+					} // End if
 				});
-			} // End if
-		});
 
-		$(window).scroll(function () {
-			$(".slideanim").each(function () {
-				var pos = $(this).offset().top;
+				$(window).scroll(function () {
+					$(".slideanim").each(function () {
+						var pos = $(this).offset().top;
 
-				var winTop = $(window).scrollTop();
-				if (pos < winTop + 600) {
-					$(this).addClass("slide");
-				}
-			});
-		});
-	})
+						var winTop = $(window).scrollTop();
+						if (pos < winTop + 600) {
+							$(this).addClass("slide");
+						}
+					});
+				});
+			})
 
-</script>
+		</script>
 
-</body>
+		</body>
 
-</html>
+		</html>

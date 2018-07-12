@@ -182,7 +182,12 @@ class Post extends CI_Controller {
             }
     }
 
-    
+    public function hasilCari(){
+        $this->load->model('post_model');
+        
+        $data['review']= $this->post_model->pencarian($this->input->post('judul'));
+		$this->load->view('hasilsearch', $data);
+    }
 
 }
 

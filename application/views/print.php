@@ -1,7 +1,7 @@
 <style>
     .poster{
-        height: 50%;
-        width: 50%;
+        height: 30%;
+        width: 40%;
     }
     h2{
         text-align: center;
