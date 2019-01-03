@@ -31,11 +31,11 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             </button>
-            <a target="" href="<?=site_url()?>post" class="navbar-brand">Tesseract</a>
+            <a target="" href="<?=site_url()?>/post" class="navbar-brand">Tesseract</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class=""><a href="<?=site_url()?>post">Home</a></li>
+                <li class=""><a href="<?=site_url()?>/post">Home</a></li>
                  <!-- <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">DropDown
                     <span class="caret"></span>
@@ -71,7 +71,7 @@
                                         <p class="text-left"><strong><?php echo $list_user[0]->nama?></strong></p>
                                         <p class="text-left small"><?php echo $list_user[0]->email?></p>
                                         <p class="text-left">
-                                            <a href="<?=site_url()?>Post/userhome" class="btn btn-primary btn-block btn-sm">See Profile</a>
+                                            <a href="<?=site_url()?>/Post/userhome" class="btn btn-primary btn-block btn-sm">See Profile</a>
                                         </p>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <p>
-                                            <a href="<?=site_url()?>Login/logout" class="btn btn-danger btn-block">Logout</a>
+                                            <a href="<?=site_url()?>/Login/logout" class="btn btn-danger btn-block">Logout</a>
                                         </p>
                                     </div>
                                 </div>
@@ -93,8 +93,8 @@
                 </li>
 
                 <?php } else{?>
-                <li><a href="<?=site_url()?>Login/daftar">Daftar</a></li>
-                <li><a href="<?=site_url()?>Login">Login</a></li>
+                <li><a href="<?=site_url()?>/Login/daftar">Daftar</a></li>
+                <li><a href="<?=site_url()?>/Login">Login</a></li>
                 <?php } ?>
             </ul>
         </div>

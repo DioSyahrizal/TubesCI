@@ -55,17 +55,17 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
             <li>
-                <a href="<?=site_url()?>post"><i class="fa fa-fw fa-check"></i> Tesseract</a>
+                <a href="<?=site_url()?>/post"><i class="fa fa-fw fa-check"></i> Tesseract</a>
             </li>    
             <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $data['username'] ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="<?=site_url()?>post/userhome"><i class="fa fa-fw fa-user"></i> Profile</a>
+                            <a href="<?=site_url()?>/post/userhome"><i class="fa fa-fw fa-user"></i> Profile</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="<?=site_url()?>Login/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="<?=site_url()?>/Login/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -74,13 +74,13 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li>
-                        <a href="<?php echo site_url()?>post/userhome"><i class="fa fa-home"></i> Home</a>
+                        <a href="<?php echo site_url()?>/post/userhome"><i class="fa fa-home"></i> Home</a>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-table"></i> Tabel <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                            <a href="<?php echo site_url()?>post/tabel"><i class="fa fa-fw fa-table"></i> Review</a>
+                            <a href="<?php echo site_url()?>/post/tabel"><i class="fa fa-fw fa-table"></i> Review</a>
                             </li>
                         </ul>
                     </li>
@@ -88,7 +88,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#tabel"><i class="fa fa-fw fa-plus"></i> Tambah <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="tabel" class="collapse">
                             <li>
-                                <a href="<?php echo site_url()?>post/tambahreview">Review</a>
+                                <a href="<?php echo site_url()?>/post/tambahreview">Review</a>
                             </li>
                         </ul>
                     </li>
