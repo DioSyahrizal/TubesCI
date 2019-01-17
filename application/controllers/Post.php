@@ -13,11 +13,10 @@ class Post extends CI_Controller {
 //main page
     public function noLogin(){
         $this->load->helper('text');
-        
         $this->load->model('post_model');
 		$data['review']=$this->post_model->getReviewQueryObject();
 		$this->load->view('index', $data);
-        
+
     }
 
     public function index()
@@ -34,8 +33,8 @@ class Post extends CI_Controller {
             }else{
                 redirect('Post/noLogin','refresh');
             }
-        
-        
+
+
     }
 
     public function review($no){
@@ -52,7 +51,7 @@ class Post extends CI_Controller {
             }else{
                 redirect('login','refresh');
             }
-        
+
     }
 
     //admin page
@@ -64,7 +63,7 @@ class Post extends CI_Controller {
                 $this->load->model('user');
                 $tampil['list_user']=$this->user->getUser($id);
                 $this->load->view('user/home',$tampil);
-            }  
+            }
     }
 
     //review
@@ -76,9 +75,9 @@ class Post extends CI_Controller {
                 $this->load->model('user');
                 $tampil['isitabel']=$this->user->getUser($id);
                 $this->load->view('user/tabel',$tampil);
-            }  
-        
-        
+            }
+
+
     }
 
     public function tambahreview(){
@@ -93,7 +92,7 @@ class Post extends CI_Controller {
 
 		$this->form_validation->set_rules('judul','Judul','trim|required');
         $this->form_validation->set_rules('foto', 'Foto', 'trim|required');
-        
+
 
         $this->load->model('post_model');
         if($this->form_validation->run() == FALSE) {
@@ -104,9 +103,9 @@ class Post extends CI_Controller {
 			$config['max_size']  = '9000000000';
 			$config['max_width']  = '10240';
 			$config['max_height']  = '7680';
-			
+
 			$this->load->library('upload', $config);
-			
+
 			if ( ! $this->upload->do_upload('userfile')){
                 $error = array('error' => $this->upload->display_errors());
                 print_r($error);
@@ -125,10 +124,10 @@ class Post extends CI_Controller {
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules('judul','Judul','trim|required');
-        
+
         $this->load->model('post_model');
         $isi['review']=$this->post_model->getReview($id);
-        
+
         if($this->form_validation->run() == FALSE) {
 			$this->load->view('user/updatereview',$isi);
 		} else {
@@ -136,7 +135,7 @@ class Post extends CI_Controller {
 				$this->post_model->updateReview($id);
 				$this->load->view('user/review_sukses');
 			}
-		
+
 
     }
 
@@ -186,7 +185,7 @@ class Post extends CI_Controller {
 
     public function hasilCari(){
         $this->load->model('post_model');
-        
+
         $data['review']= $this->post_model->pencarian($this->input->post('judul'));
 		$this->load->view('hasilsearch', $data);
     }
